@@ -67,21 +67,28 @@ body {
 
 .container {
     width: 100%;
-    background: var(--main-bg);
+    padding: 0em;
     display: flex;
-    justify-content: center;
     align-items: center;
-    box-sizing: border-box;
-    padding: 2em;
+    justify-content: center;
+    background: var(--main-bg);
+
+    @include breakpoint-up(medium) {
+        padding: 2em;
+    }
 }
 
 .calculator {
-    width: 540px;
+    width: 90%;
     height: 720px;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+
+    @include breakpoint-up(medium) {
+        width: 540px;
+    }
 
     >* {
         border-radius: 10px;
