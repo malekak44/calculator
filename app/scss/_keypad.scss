@@ -1,0 +1,67 @@
+.keypad {
+    width: 100%;
+    padding: 1em;
+    height: 480px;
+    background-color: var(--keypad-bg-toggle);
+
+    table {
+        width: 100%;
+        height: 100%;
+
+        tbody {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            tr {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    button {
+        width: 100px;
+        height: 60px;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        cursor: pointer;
+        transition: 0.3s;
+        line-height: 60px;
+        border-radius: 10px;
+        color: var(--key-color-main);
+        background: var(--key-color);
+        font-family: 'Spartan', sans-serif;
+        box-shadow: 0 5px 0 var(--key-shadow);
+
+        &:active {
+            transform: scale(0.8);
+        }
+
+        &.rst {
+            width: 225px;
+            font-size: .7em;
+            color: var(--rst-del-color);
+            background: var(--key-bg-del-reset);
+            box-shadow: 0 5px 0 var(--key-del-reset-shadow);
+        }
+
+        &.eq {
+            width: 225px;
+            color: var(--eq-color);
+            background: var(--key-bg-eq);
+            box-shadow: 0 5px 0 var(--key-eq-shadow);
+        }
+
+        &.del {
+            font-size: .7em;
+            color: var(--rst-del-color);
+            background: var(--key-bg-del-reset);
+            box-shadow: 0 5px 0 var(--key-del-reset-shadow);
+        }
+    }
+}

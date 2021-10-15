@@ -1,1 +1,1 @@
-### Calculator app with different themes.
+### Calculator app with three different themes.

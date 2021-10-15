@@ -4,12 +4,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="dist/style.css">
   <title>Calculator</title>
 </head>
 
 <body>
+  <main class="container">
+    <section class="calculator">
+      <nav>
+        <div class="logo">calc</div>
+        <div class="theme-switcher">
+          <span class="txt">THEME</span>
+          <span class="num">1 2 3</span>
+          <label for="slider">
+            <input type="range" name="switch" id="slider" min="0" max="100" value="0" step="50">
+          </label>
+        </div>
+      </nav>
+      <div class="screen">
+        <input placeholder="123" class="screen" type="text" name="txt" id="input-txt">
+      </div>
+      <div class="keypad">
+        <table>
+          <tbody>
+            <tr>
+              <td><button onclick="insert(7)">7</button></td>
+              <td><button onclick="insert(8)">8</button></td>
+              <td><button onclick="insert(9)">9</button></td>
+              <td><button onclick="del()" class="del">DEL</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="insert(4)">4</button></td>
+              <td><button onclick="insert(5)">5</button></td>
+              <td><button onclick="insert(6)">6</button></td>
+              <td><button onclick="insert('+')">+</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="insert(1)">1</button></td>
+              <td><button onclick="insert(2)">2</button></td>
+              <td><button onclick="insert(3)">3</button></td>
+              <td><button onclick="insert('-')">-</button></td>
+            </tr>
+            <tr>
+              <td><button onclick="insert('.')">.</button></td>
+              <td><button onclick="insert(0)">0</button></td>
+              <td><button onclick="insert('/')">/</button></td>
+              <td><button onclick="insert('*')">x</button></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button onclick="reset()" class="rst">RESET</button></td>
+              <td colspan="2"><button onclick="equal()" class="eq">=</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
 
-
+  <script src="app/js/script.js"></script>
 </body>
 
 </html>
